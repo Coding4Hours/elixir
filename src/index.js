@@ -41,12 +41,5 @@ server.on("upgrade", (req, socket, head) => {
   else socket.end();
 });
 
-server.on("listening", () => {
-  const addr = server.address();
-
-  console.log(`Elixir running on port ${addr.port}`);
-  console.log("");
-  console.log("You may now access it using your browser!");
-});
 
 server.listen({ port: process.env.PORT || 8080 });
